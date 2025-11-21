@@ -1,26 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sai Keerthi Posina | Software and Data Engineering Portfolio</title>
+  <meta name="description" content="Portfolio of Sai Keerthi Posina, a Computer Science undergraduate and aspiring Software and Data Engineer skilled in Java, Python, React, and AWS." />
+  
+  <!-- Fonts -->
+  <link rel="stylesheet" href="/style.css">
+  
+  <!-- Icons (Using FontAwesome CDN for simplicity in vanilla, or SVG directly) -->
+  <!-- We will use simple SVG icons inline to keep it dependency-free as per prompt request for "no external frameworks" but a CDN for icons is usually acceptable. Let's use simple inline SVGs for maximum vanilla compliance. -->
+</head>
+<body>
 
-    <meta property="og:title" content="Replit Design" />
-    <meta property="og:description" content="A website made with Replit Design" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://replit.com/public/images/opengraph.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@replit" />
-    <meta name="twitter:title" content="Replit Design" />
-    <meta name="twitter:description" content="A website made with Replit Design" />
-    <meta name="twitter:image" content="https://replit.com/public/images/opengraph.png" />
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">SKP.</a>
+      <div class="menu-toggle">☰</div>
+      <div class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#leadership" class="nav-link">Leadership</a>
+        <a href="#contact" class="nav-link btn-scroll">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Code:wght@300..700&family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- Hero Section -->
+  <section id="hero" class="fade-in-section">
+    <div class="container hero-content">
+      <span class="hero-role">Aspiring Software & Data Engineer</span>
+      <h1 class="hero-title">Sai Keerthi Posina</h1>
+      <p class="hero-subtitle">Computer Science Undergraduate building scalable solutions with data and full-stack technologies.</p>
+      
+      <div class="social-links">
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/sai-keerthi-posina" target="_blank" aria-label="LinkedIn" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/Keerthi-Posina" target="_blank" aria-label="GitHub" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <!-- Email -->
+        <a href="mailto:saikeerthiposina@gmail.com" aria-label="Email" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+      </div>
+
+      <div class="cta-group">
+        <a href="#" class="btn btn-primary">Download Resume</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="fade-in-section">
+    <div class="container">
+      <div class="section-title-container">
+        <h2>About Me</h2>
+      </div>
+      <div class="about-content">
+        <p>I am a Computer Science undergraduate passionate about bridging the gap between complex data and impactful software solutions. With experience in full-stack development and a strong foundation in machine learning and AI, I build systems that are not only functional but intelligent.</p>
+        <br>
+        <p>My technical journey includes hands-on projects with Java, Python, React, and AWS. I am certified in AWS and Red Hat, reflecting my commitment to cloud-native development and enterprise-grade applications. Beyond the code, my minor in business allows me to understand the strategic value of technology, ensuring that every line of code contributes to broader business goals.</p>
+        <br>
+        <p>I thrive in collaborative environments where I can apply my analytical skills to solve real-world problems.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="fade-in-section">
+    <div class="container">
+      <div class="section-title-container">
+        <h2>Technical Skills</h2>
+      </div>
+      
+      <div class="grid grid-2">
+        <div class="skills-category">
+          <h3>Languages</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">HTML & CSS</span>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3>Frameworks & Libraries</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3>AI & Analytics</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">Machine Learning</span>
+            <span class="skill-tag">Predictive Modeling</span>
+            <span class="skill-tag">RAG</span>
+            <span class="skill-tag">Data Visualization</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Excel</span>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3>Cloud & DevOps</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">AWS (EC2, S3, Lambda)</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Kubernetes</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">CI/CD</span>
+          </div>
+        </div>
+        
+        <div class="skills-category">
+          <h3>Databases</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MongoDB</span>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3>Methodologies</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">Agile & Scrum</span>
+            <span class="skill-tag">Requirements Analysis</span>
+            <span class="skill-tag">Technical Documentation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="fade-in-section">
+    <div class="container">
+      <div class="section-title-container">
+        <h2>Featured Projects</h2>
+      </div>
+      
+      <div class="grid grid-3">
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="project-header">
+            <h3>Code For Good Platform</h3>
+            <span class="badge">Winner</span>
+          </div>
+          <div class="project-stack">
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">MongoDB</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Scikit-learn</span>
+          </div>
+          <p class="project-description">
+            Unified web platform for an NGO to track beneficiaries and generate AI-powered insights.
+            <ul>
+              <li>Built a student dropout prediction system (68% accuracy) using BalancedBaggingClassifier.</li>
+              <li>Designed automated Excel upload/analysis for real-time predictions.</li>
+              <li>Integrated AI modules for dropout risk & sentiment analysis, reducing manual analysis by 50%.</li>
+            </ul>
+          </p>
+          <a href="#" class="project-link">View Code →</a>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-header">
+            <h3>Heart Attack Prediction</h3>
+          </div>
+          <div class="project-stack">
+            <span class="tech-pill">XGBoost</span>
+            <span class="tech-pill">AWS SageMaker</span>
+            <span class="tech-pill">MLflow</span>
+            <span class="tech-pill">Streamlit</span>
+          </div>
+          <p class="project-description">
+            End-to-end MLOps pipeline on AWS to predict heart attack risk (AUROC 0.89).
+            <ul>
+              <li>Implemented CloudWatch monitoring and SHAP for explainability.</li>
+              <li>Deployed model as an interactive Streamlit web app.</li>
+              <li>Managed full lifecycle from data preprocessing to deployment.</li>
+            </ul>
+          </p>
+          <a href="#" class="project-link">View Demo →</a>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <div class="project-header">
+            <h3>Student Mgmt System</h3>
+          </div>
+          <div class="project-stack">
+            <span class="tech-pill">Java</span>
+            <span class="tech-pill">MySQL</span>
+            <span class="tech-pill">JDBC</span>
+            <span class="tech-pill">JUnit</span>
+          </div>
+          <p class="project-description">
+            Command-line CRUD application for managing student records.
+            <ul>
+              <li>Engineered using modular object-oriented design principles.</li>
+              <li>Implemented robust validation and exception handling.</li>
+              <li>Achieved 95% code coverage with JUnit tests, reducing integration bugs.</li>
+            </ul>
+          </p>
+          <a href="#" class="project-link">View Code →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="fade-in-section">
+    <div class="container">
+      <div class="section-title-container">
+        <h2>Education</h2>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-date">Expected March 2026</div>
+        <h3 class="timeline-title">Bachelor of Technology, Computer Science & Engineering</h3>
+        <div class="timeline-subtitle">Koneru Lakshmaiah Educational Foundation, Guntur, AP</div>
+        <p>CGPA: 9.35 / 10.0 • Minor in Business</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">Completed May 2022</div>
+        <h3 class="timeline-title">Intermediate (Maths, Physics, Chemistry)</h3>
+        <div class="timeline-subtitle">Sri Sarada Educational Institutions, Vijayawada, AP</div>
+        <p>Percentage: 96.4%</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership Section -->
+  <section id="leadership" class="fade-in-section" style="background-color: var(--bg-surface);">
+    <div class="container">
+      <div class="section-title-container">
+        <h2>Leadership & Activities</h2>
+      </div>
+      
+      <div class="grid grid-2">
+        <div>
+          <h3 class="timeline-title">Public Relations Lead</h3>
+          <div class="timeline-subtitle">VACHAS Literary Club, KL University</div>
+          <div class="timeline-date">Feb 2023 - Present</div>
+          <p>Directed event promotions and external communications, increasing participation by 40%. Organized literary events and debates to boost campus engagement.</p>
+        </div>
+
+        <div>
+          <h3 class="timeline-title">Voice Lead</h3>
+          <div class="timeline-subtitle">FOCUS CSE Student Governance Body</div>
+          <div class="timeline-date">Aug 2023 - July 2024</div>
+          <p>Represented 200+ CSE students in governance meetings. Bridged communication between students and faculty to resolve academic concerns.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="fade-in-section">
+    <div class="container">
+      <div class="section-title-container">
+        <h2>Certifications</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="skill-tag" style="justify-content: center; padding: 1rem;">AWS Certified Cloud Practitioner</div>
+        <div class="skill-tag" style="justify-content: center; padding: 1rem;">Red Hat Certified Enterprise Application Developer</div>
+        <div class="skill-tag" style="justify-content: center; padding: 1rem;">Salesforce Certified AI Associate</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="fade-in-section">
+    <div class="container">
+      <div class="section-title-container">
+        <h2>Get In Touch</h2>
+        <p>Open to software and data internships, research collaborations, and early career roles.</p>
+      </div>
+
+      <div class="contact-form-container">
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" class="form-input" placeholder="your.email@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" class="form-textarea" placeholder="Hello, I'd like to discuss..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%">Send Message</button>
+        </form>
+        
+        <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="mailto:saikeerthiposina@gmail.com" class="project-link">saikeerthiposina@gmail.com</a>
+          <span style="color: var(--border-medium)">|</span>
+          <a href="tel:+919963421826" class="project-link">+91 9963421826</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://linkedin.com/in/sai-keerthi-posina" target="_blank" class="footer-link">LinkedIn</a>
+        <a href="https://github.com/Keerthi-Posina" target="_blank" class="footer-link">GitHub</a>
+      </div>
+      <p>&copy; 2025 Sai Keerthi Posina. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
 </html>

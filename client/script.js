@@ -8,15 +8,29 @@ document.addEventListener('DOMContentLoaded', () => {
   // Check local storage or system preference
   const savedTheme = localStorage.getItem('theme');
   const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const heroImg = document.querySelector('.hero-img');
+
+  const updateHeroImage = (isDark) => {
+    if (heroImg) {
+      // Add a small opacity transition to smooth the swap
+      heroImg.style.opacity = '0.5';
+      setTimeout(() => {
+        heroImg.src = isDark ? '/hero-image-dark.png' : '/hero-image.png';
+        heroImg.style.opacity = '1';
+      }, 200);
+    }
+  };
 
   if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
     html.classList.add('dark');
     iconSun.style.display = 'block';
     iconMoon.style.display = 'none';
+    updateHeroImage(true);
   } else {
     html.classList.remove('dark');
     iconSun.style.display = 'none';
     iconMoon.style.display = 'block';
+    updateHeroImage(false);
   }
 
   themeToggle.addEventListener('click', () => {
@@ -24,6 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const isDark = html.classList.contains('dark');
     
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    
+    updateHeroImage(isDark);
     
     // Toggle Icons
     if (isDark) {

@@ -175,6 +175,7 @@ section { padding: var(--space-lg) 0; }
   /* Drop shadow to separate from background */
   filter: drop-shadow(0 20px 30px rgba(124, 58, 237, 0.15));
   animation: float 6s ease-in-out infinite;
+  transition: opacity 0.2s ease; /* For smooth swapping */
 }
 @keyframes float {
   0% { transform: translateY(0px); }

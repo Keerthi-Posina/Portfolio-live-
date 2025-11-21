@@ -1,111 +1,110 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Smooth Scroll for Navigation
-  const navLinks = document.querySelectorAll('.nav-link, .btn-scroll');
+  // --- Theme Toggle Logic ---
+  const themeToggle = document.getElementById('theme-toggle');
+  const iconSun = document.getElementById('icon-sun');
+  const iconMoon = document.getElementById('icon-moon');
+  const html = document.documentElement;
+
+  // Check local storage or system preference
+  const savedTheme = localStorage.getItem('theme');
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+    html.classList.add('dark');
+    iconSun.style.display = 'block';
+    iconMoon.style.display = 'none';
+  } else {
+    html.classList.remove('dark');
+    iconSun.style.display = 'none';
+    iconMoon.style.display = 'block';
+  }
+
+  themeToggle.addEventListener('click', () => {
+    html.classList.toggle('dark');
+    const isDark = html.classList.contains('dark');
+    
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    
+    // Toggle Icons
+    if (isDark) {
+      iconSun.style.display = 'block';
+      iconMoon.style.display = 'none';
+    } else {
+      iconSun.style.display = 'none';
+      iconMoon.style.display = 'block';
+    }
+  });
+
+
+  // --- Original Scripts ---
   
-  navLinks.forEach(link => {
+  // 1. Smooth Scroll
+  document.querySelectorAll('.nav-link, .btn-scroll').forEach(link => {
     link.addEventListener('click', function(e) {
-      // Check if it's an anchor link
       const href = this.getAttribute('href');
       if (href.startsWith('#')) {
         e.preventDefault();
-        const targetId = href.substring(1);
-        const targetSection = document.getElementById(targetId);
-        
-        if (targetSection) {
-          // Close mobile menu if open
-          const navLinksContainer = document.querySelector('.nav-links');
-          if (navLinksContainer.classList.contains('mobile-active')) {
-            navLinksContainer.classList.remove('mobile-active');
-          }
-
-          // Scroll to section
-          window.scrollTo({
-            top: targetSection.offsetTop - 80, // Offset for fixed header
-            behavior: 'smooth'
-          });
+        const target = document.getElementById(href.substring(1));
+        if (target) {
+          document.querySelector('.nav-links').classList.remove('mobile-active');
+          window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
         }
       }
     });
   });
 
-  // 2. Fade-in Animation on Scroll
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-  };
-
-  const observer = new IntersectionObserver((entries, observer) => {
+  // 2. Fade-in Animation
+  const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target); // Only animate once
+        obs.unobserve(entry.target);
       }
     });
-  }, observerOptions);
+  }, { threshold: 0.1 });
 
-  document.querySelectorAll('.fade-in-section').forEach(section => {
-    observer.observe(section);
-  });
+  document.querySelectorAll('.fade-in-section').forEach(section => observer.observe(section));
 
-  // 3. Active Navigation Highlighting
-  const sections = document.querySelectorAll('section');
-  const navItems = document.querySelectorAll('.nav-link');
-
+  // 3. Active Link Highlight
   window.addEventListener('scroll', () => {
     let current = '';
-    
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (pageYOffset >= (sectionTop - 150)) {
-        current = section.getAttribute('id');
-      }
+    document.querySelectorAll('section').forEach(section => {
+      if (pageYOffset >= (section.offsetTop - 150)) current = section.getAttribute('id');
     });
-
-    navItems.forEach(item => {
-      item.classList.remove('active');
-      if (item.getAttribute('href').includes(current)) {
-        item.classList.add('active');
-      }
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').includes(current)) link.classList.add('active');
     });
   });
 
-  // 4. Mobile Menu Toggle
+  // 4. Mobile Menu
   const menuToggle = document.querySelector('.menu-toggle');
-  const navLinksContainer = document.querySelector('.nav-links');
-
   if (menuToggle) {
     menuToggle.addEventListener('click', () => {
-      navLinksContainer.classList.toggle('mobile-active');
+      document.querySelector('.nav-links').classList.toggle('mobile-active');
     });
   }
 
-  // 5. Form Handling (Mock)
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+  // 5. Mock Form Submission
+  const form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
-      
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.textContent;
-      
-      submitBtn.textContent = 'Sending...';
-      submitBtn.disabled = true;
-      
-      // Simulate network request
+      const btn = form.querySelector('button');
+      const original = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
       setTimeout(() => {
-        alert('Thanks for your message! This is a demo form, but I would love to hear from you via email.');
-        contactForm.reset();
-        submitBtn.textContent = 'Message Sent!';
-        submitBtn.style.backgroundColor = '#10b981'; // Success green
-        
+        alert('Message sent! (Demo only)');
+        form.reset();
+        btn.textContent = 'Message Sent!';
+        btn.style.backgroundColor = '#10b981';
         setTimeout(() => {
-          submitBtn.textContent = originalText;
-          submitBtn.disabled = false;
-          submitBtn.style.backgroundColor = '';
+          btn.textContent = original;
+          btn.disabled = false;
+          btn.style.backgroundColor = '';
         }, 3000);
-      }, 1500);
+      }, 1000);
     });
   }
 });

@@ -5,12 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sai Keerthi Posina | Software and Data Engineering Portfolio</title>
   <meta name="description" content="Portfolio of Sai Keerthi Posina, a Computer Science undergraduate and aspiring Software and Data Engineer skilled in Java, Python, React, and AWS." />
-  
-  <!-- Fonts -->
   <link rel="stylesheet" href="/style.css">
-  
-  <!-- Icons (Using FontAwesome CDN for simplicity in vanilla, or SVG directly) -->
-  <!-- We will use simple SVG icons inline to keep it dependency-free as per prompt request for "no external frameworks" but a CDN for icons is usually acceptable. Let's use simple inline SVGs for maximum vanilla compliance. -->
 </head>
 <body>
 
@@ -18,43 +13,65 @@
   <nav class="navbar">
     <div class="container">
       <a href="#" class="logo">SKP.</a>
-      <div class="menu-toggle">☰</div>
-      <div class="nav-links">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#education" class="nav-link">Education</a>
-        <a href="#leadership" class="nav-link">Leadership</a>
-        <a href="#contact" class="nav-link btn-scroll">Contact</a>
+      
+      <!-- Wrapper for right-side nav items -->
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <div class="nav-links">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#leadership" class="nav-link">Leadership</a>
+          <a href="#contact" class="nav-link btn-scroll">Contact</a>
+        </div>
+
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+          <!-- Sun Icon (default visible in light) -->
+          <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <!-- Moon Icon (default visible in light) -->
+          <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <div class="menu-toggle">☰</div>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <section id="hero" class="fade-in-section">
-    <div class="container hero-content">
-      <span class="hero-role">Aspiring Software & Data Engineer</span>
-      <h1 class="hero-title">Sai Keerthi Posina</h1>
-      <p class="hero-subtitle">Computer Science Undergraduate building scalable solutions with data and full-stack technologies.</p>
-      
-      <div class="social-links">
-        <!-- LinkedIn -->
-        <a href="https://linkedin.com/in/sai-keerthi-posina" target="_blank" aria-label="LinkedIn" class="social-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-        </a>
-        <!-- GitHub -->
-        <a href="https://github.com/Keerthi-Posina" target="_blank" aria-label="GitHub" class="social-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-        </a>
-        <!-- Email -->
-        <a href="mailto:saikeerthiposina@gmail.com" aria-label="Email" class="social-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-        </a>
-      </div>
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Text Content -->
+        <div class="hero-content">
+          <span class="hero-role">Aspiring Software & Data Engineer</span>
+          <h1 class="hero-title">Sai Keerthi Posina</h1>
+          <p class="hero-subtitle">Computer Science Undergraduate building scalable solutions with data and full-stack technologies.</p>
+          
+          <div class="social-links">
+            <a href="https://linkedin.com/in/sai-keerthi-posina" target="_blank" aria-label="LinkedIn" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://github.com/Keerthi-Posina" target="_blank" aria-label="GitHub" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="mailto:saikeerthiposina@gmail.com" aria-label="Email" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
 
-      <div class="cta-group">
-        <a href="#" class="btn btn-primary">Download Resume</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
+          <div class="cta-group">
+            <a href="#" class="btn btn-primary">Download Resume</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="hero-image-container">
+          <img src="/hero-image.png" alt="Illustration of Sai Keerthi Posina" class="hero-img">
+        </div>
+
       </div>
     </div>
   </section>
@@ -67,10 +84,7 @@
       </div>
       <div class="about-content">
         <p>I am a Computer Science undergraduate passionate about bridging the gap between complex data and impactful software solutions. With experience in full-stack development and a strong foundation in machine learning and AI, I build systems that are not only functional but intelligent.</p>
-        <br>
         <p>My technical journey includes hands-on projects with Java, Python, React, and AWS. I am certified in AWS and Red Hat, reflecting my commitment to cloud-native development and enterprise-grade applications. Beyond the code, my minor in business allows me to understand the strategic value of technology, ensuring that every line of code contributes to broader business goals.</p>
-        <br>
-        <p>I thrive in collaborative environments where I can apply my analytical skills to solve real-world problems.</p>
       </div>
     </div>
   </section>
@@ -81,7 +95,6 @@
       <div class="section-title-container">
         <h2>Technical Skills</h2>
       </div>
-      
       <div class="grid grid-2">
         <div class="skills-category">
           <h3>Languages</h3>
@@ -94,7 +107,6 @@
             <span class="skill-tag">HTML & CSS</span>
           </div>
         </div>
-
         <div class="skills-category">
           <h3>Frameworks & Libraries</h3>
           <div class="skills-grid">
@@ -103,7 +115,6 @@
             <span class="skill-tag">Express.js</span>
           </div>
         </div>
-
         <div class="skills-category">
           <h3>AI & Analytics</h3>
           <div class="skills-grid">
@@ -115,7 +126,6 @@
             <span class="skill-tag">Excel</span>
           </div>
         </div>
-
         <div class="skills-category">
           <h3>Cloud & DevOps</h3>
           <div class="skills-grid">
@@ -124,24 +134,6 @@
             <span class="skill-tag">Kubernetes</span>
             <span class="skill-tag">Git</span>
             <span class="skill-tag">CI/CD</span>
-          </div>
-        </div>
-        
-        <div class="skills-category">
-          <h3>Databases</h3>
-          <div class="skills-grid">
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">MongoDB</span>
-          </div>
-        </div>
-
-        <div class="skills-category">
-          <h3>Methodologies</h3>
-          <div class="skills-grid">
-            <span class="skill-tag">Agile & Scrum</span>
-            <span class="skill-tag">Requirements Analysis</span>
-            <span class="skill-tag">Technical Documentation</span>
           </div>
         </div>
       </div>
@@ -154,7 +146,6 @@
       <div class="section-title-container">
         <h2>Featured Projects</h2>
       </div>
-      
       <div class="grid grid-3">
         <!-- Project 1 -->
         <article class="project-card">
@@ -168,17 +159,16 @@
             <span class="tech-pill">Python</span>
             <span class="tech-pill">Scikit-learn</span>
           </div>
-          <p class="project-description">
+          <div class="project-description">
             Unified web platform for an NGO to track beneficiaries and generate AI-powered insights.
             <ul>
-              <li>Built a student dropout prediction system (68% accuracy) using BalancedBaggingClassifier.</li>
+              <li>Built a student dropout prediction system (68% accuracy).</li>
               <li>Designed automated Excel upload/analysis for real-time predictions.</li>
-              <li>Integrated AI modules for dropout risk & sentiment analysis, reducing manual analysis by 50%.</li>
+              <li>Integrated AI modules for dropout risk & sentiment analysis.</li>
             </ul>
-          </p>
+          </div>
           <a href="#" class="project-link">View Code →</a>
         </article>
-
         <!-- Project 2 -->
         <article class="project-card">
           <div class="project-header">
@@ -190,17 +180,16 @@
             <span class="tech-pill">MLflow</span>
             <span class="tech-pill">Streamlit</span>
           </div>
-          <p class="project-description">
+          <div class="project-description">
             End-to-end MLOps pipeline on AWS to predict heart attack risk (AUROC 0.89).
             <ul>
               <li>Implemented CloudWatch monitoring and SHAP for explainability.</li>
               <li>Deployed model as an interactive Streamlit web app.</li>
               <li>Managed full lifecycle from data preprocessing to deployment.</li>
             </ul>
-          </p>
+          </div>
           <a href="#" class="project-link">View Demo →</a>
         </article>
-
         <!-- Project 3 -->
         <article class="project-card">
           <div class="project-header">
@@ -212,14 +201,14 @@
             <span class="tech-pill">JDBC</span>
             <span class="tech-pill">JUnit</span>
           </div>
-          <p class="project-description">
+          <div class="project-description">
             Command-line CRUD application for managing student records.
             <ul>
               <li>Engineered using modular object-oriented design principles.</li>
               <li>Implemented robust validation and exception handling.</li>
-              <li>Achieved 95% code coverage with JUnit tests, reducing integration bugs.</li>
+              <li>Achieved 95% code coverage with JUnit tests.</li>
             </ul>
-          </p>
+          </div>
           <a href="#" class="project-link">View Code →</a>
         </article>
       </div>
@@ -232,14 +221,12 @@
       <div class="section-title-container">
         <h2>Education</h2>
       </div>
-      
       <div class="timeline-item">
         <div class="timeline-date">Expected March 2026</div>
         <h3 class="timeline-title">Bachelor of Technology, Computer Science & Engineering</h3>
         <div class="timeline-subtitle">Koneru Lakshmaiah Educational Foundation, Guntur, AP</div>
         <p>CGPA: 9.35 / 10.0 • Minor in Business</p>
       </div>
-
       <div class="timeline-item">
         <div class="timeline-date">Completed May 2022</div>
         <h3 class="timeline-title">Intermediate (Maths, Physics, Chemistry)</h3>
@@ -255,20 +242,18 @@
       <div class="section-title-container">
         <h2>Leadership & Activities</h2>
       </div>
-      
       <div class="grid grid-2">
         <div>
           <h3 class="timeline-title">Public Relations Lead</h3>
           <div class="timeline-subtitle">VACHAS Literary Club, KL University</div>
           <div class="timeline-date">Feb 2023 - Present</div>
-          <p>Directed event promotions and external communications, increasing participation by 40%. Organized literary events and debates to boost campus engagement.</p>
+          <p>Directed event promotions and external communications, increasing participation by 40%. Organized literary events and debates.</p>
         </div>
-
         <div>
           <h3 class="timeline-title">Voice Lead</h3>
           <div class="timeline-subtitle">FOCUS CSE Student Governance Body</div>
           <div class="timeline-date">Aug 2023 - July 2024</div>
-          <p>Represented 200+ CSE students in governance meetings. Bridged communication between students and faculty to resolve academic concerns.</p>
+          <p>Represented 200+ CSE students in governance meetings. Bridged communication between students and faculty.</p>
         </div>
       </div>
     </div>
@@ -295,7 +280,6 @@
         <h2>Get In Touch</h2>
         <p>Open to software and data internships, research collaborations, and early career roles.</p>
       </div>
-
       <div class="contact-form-container">
         <form id="contact-form">
           <div class="form-group">
@@ -312,10 +296,9 @@
           </div>
           <button type="submit" class="btn btn-primary" style="width: 100%">Send Message</button>
         </form>
-        
         <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
           <a href="mailto:saikeerthiposina@gmail.com" class="project-link">saikeerthiposina@gmail.com</a>
-          <span style="color: var(--border-medium)">|</span>
+          <span style="color: var(--text-tertiary)">|</span>
           <a href="tel:+919963421826" class="project-link">+91 9963421826</a>
         </div>
       </div>

@@ -1,0 +1,196 @@
+Here is a ready to paste, one shot prompt you can give your AI agent:
+
+```text
+You are an expert front end engineer, UX designer, and copywriter. 
+
+Goal:
+Design and implement a modern, minimal, ambitious personal portfolio website for an undergraduate student. The site must clearly position her as a strong candidate for Software Engineer and Data focused roles (SWE, data engineer, ML intern, analytics engineer, etc). Output fully working code for a responsive single page website with clean structure and good UX.
+
+Tech and output format:
+- Build a single page, responsive portfolio site.
+- Use semantic HTML5, modern CSS (Flexbox and CSS Grid), and a small amount of vanilla JavaScript for interactivity and animations.
+- Structure the output as:
+  1) index.html
+  2) style.css
+  3) script.js
+- Clearly label each file with a comment header so it is easy to copy and save into separate files.
+- Do not use external frameworks like React, Bootstrap, or Tailwind. Only vanilla HTML, CSS, and JavaScript.
+- Use system fonts or common web safe fonts (for example, a stack like: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif).
+
+Target persona:
+- Name: Sai Keerthi Posina
+- Location: India
+- Role: Computer Science undergraduate with a minor in business.
+- Target roles: Software Development Engineer, Data Engineer, ML Engineer, Data Analyst internships and early career roles.
+- Personality and brand: curious, proactive, collaborative, analytical, with a bias for building real projects that help people.
+
+Content to include exactly (rephrase for the web, but keep facts accurate):
+
+Header identity:
+- Full name: "Sai Keerthi Posina"
+- Role line: "Computer Science Undergraduate · Aspiring Software and Data Engineer"
+- Contact details:
+  - Email: saikeerthiposina@gmail.com
+  - Phone: +91 9963421826
+  - Links:
+    - LinkedIn: https://linkedin.com/in/sai-keerthi-posina
+    - GitHub:   https://github.com/Keerthi-Posina
+    - Portfolio (this same site, but add a button that can link to a resume PDF placeholder)
+- Provide prominent buttons in the hero section:
+  - "Download Resume" (link to a placeholder like resume.pdf)
+  - "Contact Me" (scrolls to contact section)
+
+Professional summary section:
+Convert this into a concise but strong "About" section:
+- She is a Computer Science undergraduate passionate about software development and data driven solutions.
+- She has experience with full stack development and machine learning and AI projects using Java, Python, React, and AWS.
+- She is certified in AWS and Red Hat.
+- She has strong teamwork, analytical, and communication skills.
+- Mention that she has a minor in business and is comfortable balancing technical depth with business context.
+
+Skills section:
+Create a well structured skills grid with clear categories and small icons or chips for each skill. Use the following content and feel free to slightly reword labels for clarity:
+
+Languages:
+- Java, Python, C, SQL, JavaScript, HTML, CSS
+
+Frameworks and libraries:
+- React.js, Node.js, Express.js
+
+AI and analytics:
+- Machine Learning, Predictive Modeling, Retrieval Augmented Generation (RAG), MCP, Data Visualization, Power BI, Excel
+
+Cloud and DevOps:
+- AWS (EC2, S3, Lambda, DynamoDB, SageMaker), Docker, Kubernetes, Git, CI/CD
+
+Databases:
+- MySQL, PostgreSQL, MongoDB
+
+Other:
+- Agile and Scrum, Requirements Analysis, Technical Documentation
+
+Projects section:
+Create a "Featured Projects" section that feels like real portfolio case studies, not just resume bullets. For each project, include:
+- Title
+- Tech stack tags
+- Short one line value statement
+- 3 to 4 bullet points of impact and responsibilities
+- Optional "View code" or "Demo" buttons that link to placeholders (for example, "#")
+
+Project 1:
+Title: JPMorgan Chase Code For Good 2025 Hackathon – Winner
+Tech stack: React, MongoDB, Node.js, Python, Scikit-learn
+Content:
+- Built a unified web platform for an NGO to track beneficiaries and generate AI powered insights, improving visibility and decision making.
+- Implemented a student dropout prediction system that achieved 68 percent accuracy using BalancedBaggingClassifier to support proactive student engagement.
+- Designed an automated Excel upload and analysis feature that enables real time predictions and interactive dashboards for non technical users.
+- Integrated AI modules for dropout risk detection, sentiment analysis, and volunteer recommendations, reducing manual analysis time and improving prediction turnaround by about 50 percent.
+Also show a small "Hackathon Winner" badge on this card.
+
+Project 2:
+Title: Heart Attack Risk Prediction
+Tech stack: XGBoost, SHAP, AWS SageMaker, MLflow, Streamlit
+Content:
+- Built an end to end MLOps pipeline on AWS SageMaker to predict heart attack risk, achieving AUROC 0.89.
+- Incorporated monitoring with CloudWatch, explainability with SHAP, and experiment tracking via MLflow.
+- Deployed the model as an interactive Streamlit web app to visualize individual risk profiles and explainable model outputs.
+- Emphasize that she worked through data preprocessing, model development, deployment, and monitoring.
+
+Project 3:
+Title: Student Management System
+Tech stack: Java, MySQL, JDBC, JUnit
+Content:
+- Engineered a command line CRUD application for managing student records using modular object oriented design and JDBC.
+- Implemented validation and exception handling to improve reliability.
+- Wrote unit tests with JUnit, reaching around 95 percent code coverage and reducing bugs discovered during integration.
+
+Education section:
+Present education in a modern card layout with timeline styling.
+
+Institution 1:
+- Koneru Lakshmaiah Educational Foundation, Guntur, AP
+- Bachelor of Technology, Computer Science and Engineering
+- CGPA: 9.35 out of 10
+- Expected graduation: March 2026
+- Mention minor in business as a small sub note.
+
+Institution 2:
+- Sri Sarada Educational Institutions, Vijayawada, AP
+- Intermediate (Maths, Physics, Chemistry)
+- Percentage: 96.4 percent
+- Completed May 2022
+
+Leadership and activities section:
+Create a "Leadership and Activities" section to show her communication and leadership skills.
+
+Role 1:
+Title: Public Relations Lead, VACHAS Literary Club, KL University
+Dates: February 2023 to Present
+Content:
+- Directed event promotions and external communications, helping increase participation by about 40 percent.
+- Organized and hosted literary events and debates that boosted campus engagement and public speaking skills.
+
+Role 2:
+Title: Voice Lead, FOCUS CSE Student Governance Body
+Dates: August 2023 to July 2024
+Content:
+- Represented 200 plus CSE students in departmental governance meetings.
+- Bridged communication between students and faculty, helping resolve academic concerns efficiently.
+
+Certifications section:
+Show this as badges or a simple grid.
+
+- AWS Certified Cloud Practitioner
+- Red Hat Certified Enterprise Application Developer
+- Salesforce Certified AI Associate
+
+Contact section:
+Include:
+- Short friendly call to action, for example: "Open to software and data internships, research collaborations, and early career roles."
+- Email: clickable mailto link.
+- LinkedIn and GitHub icons with links.
+- A simple contact form with fields: Name, Email, Message. The form does not need a backend, but you can implement front end validation and a fake success message.
+
+Design guidelines:
+- Overall aesthetic:
+  - Modern, minimal, and ambitious.
+  - Clean layout with plenty of white space, clear hierarchy, and strong typography.
+  - Make her look like a serious early career engineer, not a generic student.
+- Color palette:
+  - Use a light background with a primary accent color and a subtle secondary accent.
+  - The palette should feel professional and tech oriented, not playful.
+- Layout:
+  - Fixed top navigation bar with section links: About, Skills, Projects, Education, Leadership, Certifications, Contact.
+  - Smooth scroll behavior when clicking navigation links.
+  - Responsive layout that works well on mobile, tablet, and desktop.
+- Typography:
+  - Use a clear hierarchy of headings, subheadings, and body text.
+  - Make section titles bold and easy to scan.
+- Accessibility:
+  - Provide sufficient color contrast.
+  - Include alt text for all icons or illustrative images.
+  - Use semantic HTML elements for structure.
+
+Interactions and animations:
+- Add smooth scroll for navigation.
+- Add subtle hover animations on buttons and project cards, for example a small scale or shadow change.
+- Add a simple fade in or slide in on scroll for major sections, using JavaScript and CSS classes. Keep animations subtle and performant.
+- Add a small animated underline or highlight effect for the active navigation link while scrolling.
+
+UX details:
+- Make calls to action clear: where to click to see projects, how to contact, how to view resume.
+- Ensure the hero section immediately explains who she is, what she does, and what roles she is looking for.
+- Use concise, confident copy. Avoid buzzword overload. Focus on evidence and projects.
+- Do not invent companies or work experience that is not listed. You can slightly rephrase and enrich descriptions, but never add fake employment history.
+
+SEO and structure:
+- Add a meaningful <title> tag in the HTML head, for example: "Sai Keerthi Posina | Software and Data Engineering Portfolio".
+- Add a short meta description summarizing her profile.
+- Use logical section IDs: #about, #skills, #projects, #education, #leadership, #certifications, #contact.
+
+Final requirement:
+- Use all the factual information given above.
+- Do not change numbers like CGPA, percentages, dates, or project metrics.
+- Make the site look like something a modern early career engineer would be proud to share with recruiters in 2025.
+- Output only the three code files in a single response, clearly separated and labeled.
+```

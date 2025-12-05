@@ -1,25 +1,29 @@
 import fs from "node:fs";
-import { type Server } from "node:http";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
+import express, { type Express } from "express";
 
-import express, { type Express, type Request } from "express";
+import runApp from "./app.js";
 
-import runApp from "./app";
+// Resolve __dirname in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-export async function serveStatic(app: Express, server: Server) {
-  const distPath = path.resolve(import.meta.dirname, "public");
+export async function serveStatic(app: Express, server) {
+  const distPath = path.resolve(__dirname, "public");
 
   if (!fs.existsSync(distPath)) {
     throw new Error(
-      `Could not find the build directory: ${distPath}, make sure to build the client first`,
+      `Could not find the build directory: ${distPath}. Make sure to run your build script first.`
     );
   }
 
+  // Serve static assets
   app.use(express.static(distPath));
 
-  // fall through to index.html if the file doesn't exist
+  // SPA fallback - always return index.html
   app.use("*", (_req, res) => {
-    res.sendFile(path.resolve(distPath, "index.html"));
+    res.sendFile(path.join(distPath, "index.html"));
   });
 }
 

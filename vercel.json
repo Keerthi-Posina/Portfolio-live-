@@ -1,5 +1,9 @@
 {
   "version": 2,
-  "public": "client",
-  "cleanUrls": true
+  "builds": [
+    { "src": "client/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "client/$1" }
+  ]
 }
